@@ -85,7 +85,7 @@ const CreateCollection = () => {
       <FlatList
         data={item.emojis}
         renderItem={renderEmojiItem}
-        keyExtractor={(emoji, index) => `${emoji}-${index}`}
+        keyExtractor={(emojiChar, index) => `${emojiChar}-${index}`}
         numColumns={5}
         scrollEnabled={false}
       />
