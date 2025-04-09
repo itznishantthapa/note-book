@@ -5,6 +5,8 @@ import Dashboard from './src/screens/dashboard';
 import CollectionNotes from './src/screens/collection_notes';
 import AddNote from './src/screens/add_note';
 import ViewNote from './src/screens/view_note';
+import CreateCollection from './src/screens/create_collection';
+import EditNote from './src/screens/edit_note';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +22,8 @@ const App = () => {
         <Stack.Screen name="CollectionNotes" component={CollectionNotes} />
         <Stack.Screen name="AddNote" component={AddNote} />
         <Stack.Screen name="ViewNote" component={ViewNote} />
+        <Stack.Screen name="CreateCollection" component={CreateCollection} />
+        <Stack.Screen name="EditNote" component={EditNote} />
       </Stack.Navigator>
     </NavigationContainer>
   );

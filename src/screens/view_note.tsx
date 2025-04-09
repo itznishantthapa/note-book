@@ -30,7 +30,7 @@ const ViewNote = () => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="dark-content" backgroundColor="#fff" />
       <View style={styles.container}>
         {/* Header */}
         <View style={styles.header}>
@@ -45,7 +45,7 @@ const ViewNote = () => {
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.actionButton}
-              onPress={() => navigation.navigate('AddNote', {note})}>
+              onPress={() => navigation.navigate('EditNote', {note})}>
               <Icon name="pencil-outline" size={22} color="#000" />
             </TouchableOpacity>
             <TouchableOpacity style={styles.actionButton}>
@@ -59,22 +59,6 @@ const ViewNote = () => {
           <Text style={styles.date}>{note.date}</Text>
           <Text style={styles.title}>{note.title}</Text>
           <Text style={styles.noteContent}>{note.content}</Text>
-
-          {/* Tags */}
-          <View style={styles.tagsContainer}>
-            <Text style={styles.tagsLabel}>Tags:</Text>
-            <View style={styles.tagsList}>
-              <View style={styles.tag}>
-                <Text style={styles.tagText}>Important</Text>
-              </View>
-              <View style={styles.tag}>
-                <Text style={styles.tagText}>Work</Text>
-              </View>
-              <View style={styles.tag}>
-                <Text style={styles.tagText}>Ideas</Text>
-              </View>
-            </View>
-          </View>
         </ScrollView>
       </View>
     </SafeAreaView>
@@ -139,32 +123,6 @@ const styles = StyleSheet.create({
     color: '#333333',
     lineHeight: 24,
     marginBottom: 30,
-  },
-  tagsContainer: {
-    marginBottom: 30,
-  },
-  tagsLabel: {
-    fontSize: 14,
-    color: '#888888',
-    marginBottom: 10,
-    fontWeight: '500',
-  },
-  tagsList: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
-  tag: {
-    backgroundColor: '#F5F5F5',
-    paddingVertical: 6,
-    paddingHorizontal: 12,
-    borderRadius: 16,
-    marginRight: 8,
-    marginBottom: 8,
-  },
-  tagText: {
-    fontSize: 14,
-    color: '#000000',
-    fontWeight: '500',
   },
 });
 
